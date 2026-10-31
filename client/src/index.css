@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b0d13] text-gray-200 antialiased font-sans selection:bg-amber-500/20 selection:text-amber-300;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(229, 184, 105, 0.04) 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(30, 35, 55, 0.4) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom scrollbars for mystery vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d13;
+}
+::-webkit-scrollbar-thumb {
+  background: #262d3d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e5b869;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(229, 184, 105, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(229, 184, 105, 0.35);
+  }
+}
+
+.glow-noir {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
